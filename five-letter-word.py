@@ -20,7 +20,6 @@ if __name__ == '__main__':
 
     words = get_five_letter_words(options.fnm_word_list)
     if options.show_random:
-        len_words = len(words)
         print(words[randint(1, len(words))])
     else:
         for w in words:
