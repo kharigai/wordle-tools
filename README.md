@@ -28,6 +28,15 @@ other
 # ランダムな1文字を出力
 $ ./five-letter-word.py -r
 could
+
+# 文字を除外(複数指定=カンマ区切り)
+$ cat hhh
+about
+other
+which
+
+$ ./five-letter-word.py -f hhh -i a,c
+other
 ```
 
 
