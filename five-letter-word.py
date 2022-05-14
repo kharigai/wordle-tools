@@ -28,8 +28,9 @@ if __name__ == '__main__':
     if len(words) > 0 and len(ignore_letters) > 0:
         words = [w for w in words if not is_exit_ignore_letter(w, ignore_letters)]
     if options.show_random:
-        print(words[randint(1, len(words))])
-    else:
-        for w in words:
-            print(w)
+        if len(words) > 1:
+            words = [words[randint(0, len(words)-1)]]
+
+    for w in words:
+        print(w)
         
