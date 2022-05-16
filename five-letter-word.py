@@ -22,7 +22,7 @@ if __name__ == '__main__':
     parser.parse_args()
     options, args = parser.parse_args()
 
-    ignore_letters = [l for l in options.ignore_letters.split(',') if l != '']
+    ignore_letters = [l for l in list(options.ignore_letters) if l != '']
 
     words = get_five_letter_words(options.fnm_word_list)
     if len(words) > 0 and len(ignore_letters) > 0:
